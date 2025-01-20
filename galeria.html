@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Galeria</title>
+    <link rel="shortcut icon" href="img/ikona.png">
+    <link rel="stylesheet" href="index.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/color/jquery.color-3.0.0.js" integrity="sha256-nXuT40V5wsIpHV/V7Ay53Vf/1rg21qpiGWOP9CRk2tM=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header">
+        <nav id="logo_podstrona">
+            <a href="index.html"><img src="img/logo_szerokie.jpg" alt="Logo zespołu"></a>
+        </nav>
+        
+        <ul id="menu">
+			<li>
+				<a id="wysun">O NAS</a>
+				<ul>
+					<li><a href="#">HISTORIA</a></li>
+					<li><a href="ekipa.html">EKIPA</a></li>
+					<li><a href="galeria.html">GALERIA</a></li>
+				</ul>
+			</li>
+			<li><a href="wydarzenia.html">WYDARZENIA</a></li>
+			<li><a href="#">ALBUMY</a></li>
+			<li><a href="sklep.html">SKLEP</a></li>
+			<li><a href="kontakt.html">KONTAKT</a></li>
+			<li><a href="https://www.kupbilecik.pl/" target="_blank">BILETY</a></li>
+		</ul>
+    </header>
+
+    <main>
+        <h1>GALERIA</h1>
+        <div id="slideshow-container">
+            <div id="slideshow">
+                <div class="slide">
+                    <img src="img/galeria/koncert1_1.jpg" alt="Koncert 1.1" class="slider">
+                </div>
+                <div class="slide">
+                    <img src="img/galeria/koncert1_2.jpg" alt="Koncert 1.2" class="slider">
+                </div>
+                <div class="slide">
+                    <img src="img/galeria/koncert1_3.jpg" alt="Koncert 1.3" class="slider">
+                </div>
+                <div class="slide">
+                    <img src="img/galeria/koncert1_4.jpg" alt="Koncert 1.4" class="slider">
+                </div>
+            </div>
+            <div id="pasek">
+                <img src="img/galeria/koncert1_1.jpg" class="sml" data-target="0">
+                <img src="img/galeria/koncert1_2.jpg" class="sml" data-target="1">
+                <img src="img/galeria/koncert1_3.jpg" class="sml" data-target="2">
+                <img src="img/galeria/koncert1_4.jpg" class="sml" data-target="3">
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-line"></div>
+            <p>&copy 2024 Irownwill</p>
+			<p>zdjęcia pochodzą ze strony freepik.com</p>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            let currentSlide = 0;
+            const slides = $('#slideshow .slide');
+            const totalSlides = slides.length;
+
+            function showSlide(index) {
+                slides.hide().eq(index).fadeIn(600);
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                showSlide(currentSlide);
+            }
+
+            const autoSlide = setInterval(nextSlide, 5000);
+
+            $('#pasek .mini').on('click', function () {
+                clearInterval(autoSlide);
+                currentSlide = $(this).data('target');
+                showSlide(currentSlide);
+            });
+
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>

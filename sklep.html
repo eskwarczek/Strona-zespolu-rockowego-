@@ -5,58 +5,79 @@
 	<title>Sklep</title>
 	<link rel="shortcut icon" href="img/ikona.png">
     <script src="jquery-3.7.1.min.js"></script>
-    <link rel="stylesheet" href="poboczne_strony.css">
+    <link rel="stylesheet" href="index.css">
     <script defer src="index.js"></script>
 </head>
 <body>
- <main>
+<main>
     <header id="header">
-        <!--LOGO--> 
         <nav id="logo_podstrona">
-            <a href="index.html"><img src="img/logo_szerokie.jpg" alt="Logo zespołu" style = "width:150%;"></a>
+            <a href="index.html"><img src="img/logo_szerokie.jpg" alt="Logo zespołu"></a>
         </nav>
         
-        <!--MENU-->
-        <nav id="menu_podstrona">
-            <a id="wysun">O NAS</a>
-            <a href="wydarzenia.html">WYDARZENIA</a>
-            <a href="#">ALBUMY</a>
-            <a href="sklep.html">SKLEP</a>
-            <a href="#">KONTAKT</a>
-            <a href="https://www.kupbilecik.pl/" target="_blank">BILETY</a>
-        </nav>
+        <ul id="menu">
+			<li>
+				<a id="wysun">O NAS</a>
+				<ul>
+					<li><a href="#">HISTORIA</a></li>
+					<li><a href="ekipa.html">EKIPA</a></li>
+					<li><a href="galeria.html">GALERIA</a></li>
+				</ul>
+			</li>
+			<li><a href="wydarzenia.html">WYDARZENIA</a></li>
+			<li><a href="#">ALBUMY</a></li>
+			<li><a href="sklep.html">SKLEP</a></li>
+			<li><a href="kontakt.html">KONTAKT</a></li>
+			<li><a href="https://www.kupbilecik.pl/" target="_blank">BILETY</a></li>
+		</ul>
     </header>
-	
-	<nav id="mini">
-        <a href="#">HISTORIA ZESPOŁU</a>
-        <a href="ekipa.html">EKIPA</a>
-        <a href="#">GALERIA</a>
-    </nav>
 
-	<div id="merch">
-	<p>AKCESORIA IRONWILL<p>
-	</div>
+    <h1>NASZ MERCH</h1>
 
 	<div class="content">
-	    <div class="article">
-			<img src="img/sklep/bluza.png" style="width:100%;">
+        <div class="article">
+            <img src="img/sklep/naklejki.png" alt="Naklejki">
+			<div class="dane">
+				<p class="product-name">Naklejki</p>
+				<p class="product-price">10 zł</p>
+			</div>
         </div>
-		<div class="article">
-			<img src="img/sklep/bag.png" style="width:100%;">
+        <div class="article">
+            <img src="img/sklep/czapka.png" alt="Czapka">
+			<div class="dane">
+				<p class="product-name">Czapka</p>
+				<p class="product-price">30 zł</p>
+			</div>
         </div>
-		<div class="article">
-			<img src="img/sklep/tshirtM.png" style="width:100%;">
+        <div class="article">
+            <img src="img/sklep/case.png" alt="Case">
+			<div class="dane">
+				<p class="product-name">Case na telefon</p>
+				<p class="product-price">35 zł</p>
+			</div>
         </div>
-		<div class="article">
-			<img src="img/sklep/case.png" style="width:100%;">
+        <div class="article">
+            <img src="img/sklep/bluza.png" alt="Bluza">
+			<div class="dane">
+				<p class="product-name">Bluza z kapturem</p>
+				<p class="product-price">65 zł</p>
+			</div>
         </div>
-		<div class="article">
-			<img src="img/sklep/czapka.png" style="width:100%;">
+        <div class="article">
+            <img src="img/sklep/bag.png" alt="Torba">
+			<div class="dane">
+				<p class="product-name">Torba</p>
+				<p class="product-price">20 zł</p>
+			</div>
         </div>
-		<div class="article">
-			<img src="img/sklep/naklejki.png" style="width:100%;">
+        <div class="article">
+            <img src="img/sklep/tshirtM.png" alt="T-shirt">
+			<div class="dane">
+				<p class="product-name">T-shirt</p>
+				<p class="product-price">40 zł</p>
+			</div>
         </div>
-	</div>
+    </div>
 	</main>
     <footer class="footer">
         <div class="footer-line"></div>
@@ -67,18 +88,14 @@
         $(document).ready(function() {
             let timeout;
     
-            // Gdy myszka wchodzi na "O NAS" lub "mini"
-            $("#menu_podstrona a:contains('O NAS'), #mini").on('mouseenter', function() {
-                clearTimeout(timeout); // Anuluj ukrywanie
-                $('#mini').stop(true, true).slideDown(300); // Pokaż menu
-            });
-    
-            // Gdy myszka opuszcza "O NAS" lub "mini"
-            $("#menu_podstrona a:contains('O NAS'), #mini").on('mouseleave', function() {
-                timeout = setTimeout(function() {
-                    $('#mini').stop(true, true).slideUp(300); // Ukryj menu po opóźnieniu
-                }, 300); // Czas opóźnienia (300 ms)
-            });
+			$('#menu > li').hover(
+				function () {
+					$(this).find('ul').stop(true, true).slideDown(300);
+				},
+				function () {
+					$(this).find('ul').stop(true, true).slideUp(300);					
+				}
+           	 );
 		});
 		
 	

@@ -10,31 +10,30 @@
 </head>
 <body>
     <header id="header">
-        <!--LOGO--> 
         <nav id="logo_podstrona">
-            <a href="index.html"><img src="img/logo_szerokie.jpg" alt="Logo zespołu" style = "width:150%;"></a>
+            <a href="index.html"><img src="img/logo_szerokie.jpg" alt="Logo zespołu"></a>
         </nav>
         
-        <!--MENU-->
-        <nav id="menu">
-            <a id="wysun">O NAS</a>
-            <a href="wydarzenia.html">WYDARZENIA</a>
-            <a href="#">ALBUMY</a>
-            <a href="sklep.html">SKLEP</a>
-            <a href="#">KONTAKT</a>
-            <a href="https://www.kupbilecik.pl/" target="_blank">BILETY</a>
-        </nav>
+        <ul id="menu">
+			<li>
+				<a id="wysun">O NAS</a>
+				<ul>
+					<li><a href="#">HISTORIA</a></li>
+					<li><a href="ekipa.html">EKIPA</a></li>
+					<li><a href="galeria.html">GALERIA</a></li>
+				</ul>
+			</li>
+			<li><a href="wydarzenia.html">WYDARZENIA</a></li>
+			<li><a href="#">ALBUMY</a></li>
+			<li><a href="sklep.html">SKLEP</a></li>
+			<li><a href="kontakt.html">KONTAKT</a></li>
+			<li><a href="https://www.kupbilecik.pl/" target="_blank">BILETY</a></li>
+		</ul>
     </header>
 
-    <nav id="mini_ekipa">
-        <a href="#">HISTORIA ZESPOŁU</a>
-        <a href="ekipa.html">EKIPA</a>
-        <a href="#">GALERIA</a>
-    </nav>
-
     <main>
+        <h1>NASI CZŁONKOWIE</h1>
         <section class="team-gallery">
-			
             <div class="team-member">
                 <img src="img/czlonkowie/osoba2.jpg" alt="Zdjęcie gitarzystki Kasi">
                 <h3>Kasia</h3>
@@ -78,21 +77,16 @@
         $(document).ready(function() {
             let timeout;
     
-            // Gdy myszka wchodzi na "O NAS" lub "mini"
-            $("#menu a:contains('O NAS'), #mini_ekipa").on('mouseenter', function() {
-                clearTimeout(timeout); // Anuluj ukrywanie
-                $('#mini_ekipa').stop(true, true).slideDown(300); // Pokaż menu
-            });
-    
-            // Gdy myszka opuszcza "O NAS" lub "mini"
-            $("#menu a:contains('O NAS'), #mini_ekipa").on('mouseleave', function() {
-                timeout = setTimeout(function() {
-                    $('#mini_ekipa').stop(true, true).slideUp(300); // Ukryj menu po opóźnieniu
-                }, 300); // Czas opóźnienia (300 ms)
-            });
+            $('#menu > li').hover(
+				function () {
+					$(this).find('ul').stop(true, true).slideDown(300);
+				},
+				function () {
+					$(this).find('ul').stop(true, true).slideUp(300);					
+				}
+           	 );
 		});
 		
-	
 		document.addEventListener("scroll", () => {
 			const menu = document.getElementById("header");
 			if (window.scrollY > 50) {

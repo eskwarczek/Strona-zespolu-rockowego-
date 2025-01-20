@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Kontakt</title>
+    <link rel="shortcut icon" href="img/ikona.png">
+    <script src="jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <main>
+        <header id="header">
+            <nav id="logo_podstrona">
+                <a href="index.html"><img src="img/logo_szerokie.jpg" alt="Logo zespołu"></a>
+            </nav>
+
+            <ul id="menu">
+                <li>
+                    <a id="wysun">O NAS</a>
+                    <ul>
+                        <li><a href="#">HISTORIA</a></li>
+                        <li><a href="ekipa.html">EKIPA</a></li>
+                        <li><a href="galeria.html">GALERIA</a></li>
+                    </ul>
+                </li>
+                <li><a href="wydarzenia.html">WYDARZENIA</a></li>
+                <li><a href="#">ALBUMY</a></li>
+                <li><a href="sklep.html">SKLEP</a></li>
+                <li><a href="kontakt.html">KONTAKT</a></li>
+                <li><a href="https://www.kupbilecik.pl/" target="_blank">BILETY</a></li>
+            </ul>
+        </header>
+
+        <h1>SKONTAKTUJ SIĘ Z NAMI</h1>
+
+        <div class="content">
+            <form class="contact-form">
+                <label for="name">Imię:</label>
+                <input type="text" id="name" name="name" placeholder="Wpisz swoje imię" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Wpisz swój e-mail" required>
+
+                <label for="role">Kim jesteś?</label>
+                <select id="role" name="role" required>
+                    <option value="fan">Fan</option>
+                    <option value="sponsor">Potencjalny sponsor</option>
+                    <option value="collaborator">Potencjalny współpracownik</option>
+                    <option value="other">Ktoś inny</option>
+                </select>
+
+                <label for="message">Treść wiadomości:</label>
+                <textarea id="message" name="message" placeholder="Wpisz swoją wiadomość" rows="5" required></textarea>
+
+                <button type="submit">Wyślij</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-line"></div>
+        <p>&copy 2024 Irownwill</p>
+        <p>Zdjęcia pochodzą ze strony freepik.com</p>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            $('#menu > li').hover(
+                function () {
+                    $(this).find('ul').stop(true, true).slideDown(300);
+                },
+                function () {
+                    $(this).find('ul').stop(true, true).slideUp(300);					
+                }
+            );
+        });
+
+        document.addEventListener("scroll", () => {
+            const menu = document.getElementById("header");
+            if (window.scrollY > 50) {
+                menu.style.backgroundColor = "rgba(0,0,0, 0.6)";
+            } else {
+                menu.style.backgroundColor = "rgba(0, 0, 0, 1)";
+            }
+        });
+    </script>
+</body>
+</html>
