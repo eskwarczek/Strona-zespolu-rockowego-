@@ -7,67 +7,74 @@ body {
 	background-color: #000;
 	position: relative;
 }
+
 #header {
 	position: fixed;
 	top: 0;
 	width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: #000;
-	z-index: 1000; /*To nam ratuje menu, żeby nie migało!*/
+	z-index:1000; 
+}
+
+h1 {
+	color: #fff;
+	font-size: 2vw;
+	letter-spacing: 0.1vw;
+	z-index: 1;
 }
 a {
     color: #fff;
     text-decoration: none;
 }
-h1 {
-	margin-top: 6vw;
-    color: #fff;
-	font-size: 2vw;
-	padding: 0 2vw;
-	letter-spacing: 0.2vw;
-	z-index: 1;
-    text-align: center;
-}
 #logo {
 	position: absolute;
     top: 0;
     left: 0;
-    padding: 0.5vw 0.5vw; 
+    padding: 0.4vw 0vw; 
 }
 #logo img {
-	height: 5.5vw;
-    width: 110%;
+	height: 6vw;
 }
+
 #menu {
-    display: absolute;
+    display: flex;
     margin-left: 30%;
 	height: 2.5vw;
-    padding: 0 4vw;
-    list-style: none;
+	padding: 0.5vw 2vw 0.5vw 0vw;
+	width: 100%; 
+	list-style: none;
     text-decoration: none;
 }
-#menu > li {
+
+#menu li {
     display: inline-block; 
     text-decoration: none;
-    line-height: 2vw; 
+    line-height: 2.5vw; 
     cursor: pointer;
+    color: #fff;
     font-size: 1.2vw; 
-    padding: 0 2vw;
-    border-right: 0.15vw solid #fff;
+	padding: 0 2vw 0 2vw;
+	border-right: 0.15vw solid #fff;
 }
 #menu > li:last-child {
 	border-right: none;
 }
-#menu > li:hover {
-	color: #000;
-	background-image: linear-gradient(to right, white, #d9d9d9, #bfbfbf, #a6a6a6, #8c8c8c, #737373, #595959, #404040);
+
+#menu li:hover {
+	color:black;
+	background-image: linear-gradient(to right, white, #d9d9d9, #bfbfbf, #a6a6a6, #8c8c8c, #737373, #595959, #404040); /*Na głównej stronie nie pasuje*/
+   /* background-color: rgba(64, 64, 64, 0.5);
+    color: rgb(191, 191, 191);*/
 }
+
 #menu li ul {
 	display: none;
 	position: absolute;
 	top: 100%;
-	left: 38.05%;
+	left: 32.05%;
 	transform: translateX(-50%);
 	padding: 0.1vw 0;
 	list-style: none;
@@ -79,17 +86,18 @@ h1 {
 }
 #menu li ul li {
 	color: #fff;
-	cursor: pointer;
 	line-height: 2.5vw;
 	font-size: 1vw;
 	text-align: center;
 	cursor: pointer;
 	transition: background-color 0.3s, color 0.3s;
+	border-right: none;
 }
 #menu li ul li:hover {
 	color: rgba(0,0,0, 0.7);
 	background-image: linear-gradient(to right, white, #d9d9d9, #bfbfbf, #a6a6a6, #8c8c8c, #737373, #595959, #404040); 
 }
+
 .footer {
     text-align: center;
     font-size: 1vw;
@@ -116,26 +124,22 @@ h1 {
     height: 50px;
 	background: rgba(0, 0, 0, 0.3);
     pointer-events: none;
-	
 }
 
 .toggle-btn {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    bottom: 0px;
+    right: 0px;
     background: rgba(0, 0, 0, 0.8);
-    color: white; /* Czerwony kolor tekstu */
-    font-weight: bold; /* Pogrubienie tekstu */
-    border: none; /* Usunięcie obramowania */
+    color: white;
+    font-weight: bold;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
 	padding: 0 1vw 0 1vw;
 	
 }
-
 .toggle-btn:hover {
-    color: darkred; /* Ciemniejszy odcień czerwonego przy najechaniu */
-	
+    color: darkred; /* Ciemniejszy odcień czerwonego przy najechaniu */	
 }
 
 #slides .slide {
