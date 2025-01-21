@@ -64,30 +64,46 @@
     </footer>
 
     <script>
-        $(document).ready(function () {
-            let currentSlide = 0;
-            const slides = $('#slideshow .slide');
-            const totalSlides = slides.length;
+    $(document).ready(function () {
+        let currentSlide = 0;
+        const slides = $('#slideshow .slide');
+        const totalSlides = slides.length;
 
-            function showSlide(index) {
-                slides.hide().eq(index).fadeIn(600);
-            }
+        function showSlide(index) {
+            slides.hide().eq(index).fadeIn(600);
+        }
 
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % totalSlides;
-                showSlide(currentSlide);
-            }
-
-            const autoSlide = setInterval(nextSlide, 5000);
-
-            $('#pasek .mini').on('click', function () {
-                clearInterval(autoSlide);
-                currentSlide = $(this).data('target');
-                showSlide(currentSlide);
-            });
-
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
             showSlide(currentSlide);
+        }
+
+        // Automatyczne przewijanie
+        const autoSlide = setInterval(nextSlide, 4000);
+
+        // Obsługa kliknięcia w miniaturkę
+        $('#pasek .sml').on('click', function () {
+            currentSlide = $(this).data('target'); // Pobierz indeks slajdu z `data-target`
+            showSlide(currentSlide); // Pokaż wybrany slajd
         });
+
+        showSlide(currentSlide); // Wyświetl pierwszy slajd przy ładowaniu strony
+    });
+	        $(document).ready(function() {
+            let timeout; // Zmienna do zarządzania opóźnieniem
+			
+			$('#menu > li').hover(
+				function () {
+					$(this).find('ul').stop(true, true).slideDown(300);
+				},
+				function () {
+					$(this).find('ul').stop(true, true).slideUp(300);					
+				}
+           	 );
+			 });
+			 
+
+
     </script>
 </body>
 </html>
