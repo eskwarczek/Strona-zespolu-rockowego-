@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="index.css">
     <script defer src="index.js"></script>
 </head>
+
 <body class="index-page">
     <header id="header">
 		<nav id="logo">
@@ -18,13 +19,13 @@
 			<li>
 				<a id="wysun">O NAS</a>
 				<ul>
-					<li><a href="#">HISTORIA</a></li>
+					<li><a href="historia.html">HISTORIA</a></li>
 					<li><a href="ekipa.html">EKIPA</a></li>
 					<li><a href="galeria.html">GALERIA</a></li>
 				</ul>
 			</li>
 			<li><a href="wydarzenia.html">WYDARZENIA</a></li>
-			<li><a href="#">ALBUMY</a></li>
+			<li><a href="albumy.html">ALBUMY</a></li>
 			<li><a href="sklep.html">SKLEP</a></li>
 			<li><a href="kontakt.html">KONTAKT</a></li>
 			<li><a href="https://www.kupbilecik.pl/" target="_blank">BILETY</a></li>
@@ -32,52 +33,52 @@
 		</ul>
     </header>
 
-    <nav id="slides">
-        <a id="slide"><img src="img/slide/koncert_tlo1.jpg" style="width:100%; height: 40vw;"></a>
-		<a id="slide"><img src="img/slide/koncert_tlo2.jpg" style="width:100%; height: 40vw;"></a>
-		<a id="slide"><img src="img/slide/koncert_tlo4.jpg" style="width:100%; height: 40vw;"></a>
-		<a id="slide"><img src="img/slide/koncert_tlo5.jpg" style="width:100%; height: 40vw;"></a>
-		<!-- Strzałki -->
-		<button id="prev">&#10094;</button>
-		<button id="next">&#10095;</button>
-		<!-- Kropeczki -->
-		<div id="dots">
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
+	<main>
+		<nav id="slides">
+			<a id="slide"><img src="img/slide/koncert_tlo1.jpg" style="width:100%; height: 40vw;"></a>
+			<a id="slide"><img src="img/slide/koncert_tlo2.jpg" style="width:100%; height: 40vw;"></a>
+			<a id="slide"><img src="img/slide/koncert_tlo4.jpg" style="width:100%; height: 40vw;"></a>
+			<a id="slide"><img src="img/slide/koncert_tlo5.jpg" style="width:100%; height: 40vw;"></a>
+			<!-- Strzałki -->
+			<button id="prev">&#10094;</button>
+			<button id="next">&#10095;</button>
+			<!-- Kropeczki -->
+			<div id="dots">
+				<span class="dot"></span>
+				<span class="dot"></span>
+				<span class="dot"></span>
+				<span class="dot"></span>
+			</div>
+		</nav>
+
+		<h1>AKTUALNOŚCI</h1>
+		<div class="content">
+			<div class="column">
+				<h3>Występ na WOŚP w Krakowie!</h3>
+				<p class="text" id="text1">W tamtym tygodniu mieliśmy przyjemność zagrać podczas finału Wielkiej Orkiestry Świątecznej Pomocy w Krakowie! Było niesamowicie, a energia publiczności na Rynku Głównym przeszła nasze oczekiwania. Dziękujemy wszystkim, którzy przyszli nas wesprzeć i wspólnie z nami pomogli zebrać fundusze na ten szczytny cel. Dla nas to ogromny zaszczyt móc brać udział w tym wydarzeniu, które jednoczy ludzi w szczytnym celu. Zawsze będziemy wspierać WOŚP i mam nadzieję, że za rok spotkamy się ponownie na scenie!</p>
+				<div class="overlay" id="overlay1"></div>
+				<button class="toggle-btn" id="toggleBtn1">Zobacz więcej</button>
+			</div>
+			<div class="column">
+				<h3>Nowy album już w drodze!</h3>
+				<p class="text" id="text2">Pracujemy nad kolejnym albumem, który zabierze Was w jeszcze bardziej emocjonującą muzyczną podróż. Wkrótce zdradzimy więcej szczegółów, w tym tytuł oraz listę utworów. Śledźcie nasze profile społecznościowe, aby być na bieżąco z premierą! Nasz nowy materiał jest pełen niespodzianek – od bardziej intensywnych brzmień, po bardziej stonowane utwory, które z pewnością poruszą wasze serca. Jesteśmy bardzo podekscytowani tym, co przygotowaliśmy i nie możemy doczekać się, by podzielić się tym z wami!</p>
+				<div class="overlay" id="overlay2"></div>
+				<button class="toggle-btn" id="toggleBtn2">Zobacz więcej</button>
+			</div>
+			<div class="column">
+				<h3>Koncert w Katowicach – wielki sukces!</h3>
+				<p class="text" id="text3">Katowice, byliście niesamowici! Wasze wsparcie i wspólne śpiewanie z nami na koncercie w Spodku to chwile, które na długo zapamiętamy. Dziękujemy za stworzenie wyjątkowej atmosfery – to dla Was robimy muzykę! Katowice to jedno z tych miejsc, które nigdy nie zawodzi – energia publiczności była elektryzująca! Cieszymy się, że mogliśmy wystąpić w tym niesamowitym mieście i zagrzać Was do wspólnego śpiewania. Z niecierpliwością czekamy na kolejne koncerty w Waszym regionie!</p>
+				<div class="overlay" id="overlay3"></div>
+				<button class="toggle-btn" id="toggleBtn3">Zobacz więcej</button>
+			</div>
+			<div class="column">
+				<h3>Nowe produkty w sklepie!</h3>
+				<p class="text" id="text4">Nasze koszulki, bluzy i gadżety cieszą się ogromnym zainteresowaniem, dlatego dodaliśmy kilka nowych produktów! Odwiedźcie nasz sklep i sprawdźcie, co przygotowaliśmy. Z każdym zakupem wspieracie naszą twórczość. Dziękujemy! W naszej ofercie znajdziecie także limitowane edycje, które będą dostępne tylko przez krótki czas. Każdy produkt jest starannie wykonany z wysokiej jakości materiałów, a dochód z ich sprzedaży pomoże nam w dalszym rozwijaniu naszej muzycznej działalności. Zapraszamy do zakupów!</p>
+				<div class="overlay" id="overlay4"></div>
+				<button class="toggle-btn" id="toggleBtn4">Zobacz więcej</button>
+			</div>
 		</div>
-    </nav>
-
-	<h1>AKTUALNOŚCI</h1>
- <div class="content">
-        <div class="column">
-            <h3>Występ na WOŚP w Krakowie!</h3>
-            <p class="text" id="text1">W tamtym tygodniu mieliśmy przyjemność zagrać podczas finału Wielkiej Orkiestry Świątecznej Pomocy w Krakowie! Było niesamowicie, a energia publiczności na Rynku Głównym przeszła nasze oczekiwania. Dziękujemy wszystkim, którzy przyszli nas wesprzeć i wspólnie z nami pomogli zebrać fundusze na ten szczytny cel. Dla nas to ogromny zaszczyt móc brać udział w tym wydarzeniu, które jednoczy ludzi w szczytnym celu. Zawsze będziemy wspierać WOŚP i mam nadzieję, że za rok spotkamy się ponownie na scenie!</p>
-            <div class="overlay" id="overlay1"></div>
-            <button class="toggle-btn" id="toggleBtn1">Więcej</button>
-        </div>
-        <div class="column">
-            <h3>Nowy album już w drodze!</h3>
-            <p class="text" id="text2">Pracujemy nad kolejnym albumem, który zabierze Was w jeszcze bardziej emocjonującą muzyczną podróż. Wkrótce zdradzimy więcej szczegółów, w tym tytuł oraz listę utworów. Śledźcie nasze profile społecznościowe, aby być na bieżąco z premierą! Nasz nowy materiał jest pełen niespodzianek – od bardziej intensywnych brzmień, po bardziej stonowane utwory, które z pewnością poruszą wasze serca. Jesteśmy bardzo podekscytowani tym, co przygotowaliśmy i nie możemy doczekać się, by podzielić się tym z wami!</p>
-            <div class="overlay" id="overlay2"></div>
-            <button class="toggle-btn" id="toggleBtn2">Więcej</button>
-        </div>
-        <div class="column">
-            <h3>Koncert w Katowicach – wielki sukces!</h3>
-            <p class="text" id="text3">Katowice, byliście niesamowici! Wasze wsparcie i wspólne śpiewanie z nami na koncercie w Spodku to chwile, które na długo zapamiętamy. Dziękujemy za stworzenie wyjątkowej atmosfery – to dla Was robimy muzykę! Katowice to jedno z tych miejsc, które nigdy nie zawodzi – energia publiczności była elektryzująca! Cieszymy się, że mogliśmy wystąpić w tym niesamowitym mieście i zagrzać Was do wspólnego śpiewania. Z niecierpliwością czekamy na kolejne koncerty w Waszym regionie!</p>
-            <div class="overlay" id="overlay3"></div>
-            <button class="toggle-btn" id="toggleBtn3">Więcej</button>
-        </div>
-        <div class="column">
-            <h3>Nowe produkty w sklepie!</h3>
-            <p class="text" id="text4">Nasze koszulki, bluzy i gadżety cieszą się ogromnym zainteresowaniem, dlatego dodaliśmy kilka nowych produktów! Odwiedźcie nasz sklep i sprawdźcie, co przygotowaliśmy. Z każdym zakupem wspieracie naszą twórczość. Dziękujemy! W naszej ofercie znajdziecie także limitowane edycje, które będą dostępne tylko przez krótki czas. Każdy produkt jest starannie wykonany z wysokiej jakości materiałów, a dochód z ich sprzedaży pomoże nam w dalszym rozwijaniu naszej muzycznej działalności. Zapraszamy do zakupów!</p>
-            <div class="overlay" id="overlay4"></div>
-            <button class="toggle-btn" id="toggleBtn4">Więcej</button>
-        </div>
-    </div>
-
-
+	</main>
 
     <footer class="footer">
         <div class="footer-line"></div>
@@ -86,143 +87,11 @@
     </footer>
 
     <script>
-        $(document).ready(function() {
-            let timeout; // Zmienna do zarządzania opóźnieniem
-			
-			$('#menu > li').hover(
-				function () {
-					$(this).find('ul').stop(true, true).slideDown(300);
-				},
-				function () {
-					$(this).find('ul').stop(true, true).slideUp(300);					
-				}
-           	 );
-
-			// SLAJDY, STRZAŁKI, KROPECZKI
-			let slides = $("#slides a");
-			let dots = $("#dots .dot");
-			let currentIndex = 1;
-
-			slides.hide();
-			slides.eq(currentIndex).show();
-			dots.eq(currentIndex).addClass("active");
-	
-			function showNextSlide() {
-				slides.eq(currentIndex).fadeOut(400, function() {
-				currentIndex = (currentIndex + 1) % slides.length;
-				slides.eq(currentIndex).fadeIn(400);
-				updateDots();
-			});
-			}
-	
-			function showPrevSlide() {
-				slides.eq(currentIndex).fadeOut(400, function() {
-				currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-				slides.eq(currentIndex).fadeIn(400);
-				updateDots();
-			});
-			}
-
-			function updateDots() {
-				dots.removeClass("active"); // Usuń klasę aktywną ze wszystkich kropeczek
-				dots.eq(currentIndex).addClass("active"); // Dodaj klasę aktywną do bieżącej kropeczki
-			}
-			function startAutoSlide() {
-				interval = setInterval(showNextSlide, 3000);
-			}
-
-			function stopAutoSlide() {
-				clearInterval(interval);
-			}
-	
-			function showNextSlideOnClick() {
-				slides.eq(currentIndex).fadeOut(200, function() {
-				currentIndex = (currentIndex + 1) % slides.length;
-				slides.eq(currentIndex).fadeIn(200);
-			});
-			}
-			function showPrevSlideOnClick() {
-				slides.eq(currentIndex).fadeOut(200, function() {
-				currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-				slides.eq(currentIndex).fadeIn(200);
-			});
-			}
-	    
-			// Obsługa kropeczek
-			dots.click(function() {
-				stopAutoSlide();
-				currentIndex = $(this).index(); // Ustaw indeks na klikniętą kropeczkę
-				slides.fadeOut(500);
-				slides.eq(currentIndex).fadeIn(500); // Pokaż slajd odpowiadający klikniętej kropeczce
-				updateDots(); // Zaktualizuj aktywną kropeczkę
-				startAutoSlide();
-			}); 
-	
-			$("#next").click(function () {
-				stopAutoSlide();
-				showNextSlideOnClick();
-				updateDots();
-				startAutoSlide();
-			});
-
-			$("#prev").click(function () {
-				stopAutoSlide();
-				showPrevSlideOnClick();
-				updateDots();
-				startAutoSlide();
-			});
-	
-			interval = setInterval(showNextSlide, 2000);
-
-			let strzalki = $("#prev, #next");
-			strzalki.hide();
-                $("#slides").mouseenter(function() {
-                    $("#prev, #next").fadeIn(200);
-                });
-                $("#slides").mouseleave(function() {
-                    $("#prev, #next").fadeOut(200);
-                });
-		
-		// Funkcja rozwijania i zwijania tekstu
-		$(".column").click(function() {
-        	$(this).toggleClass("active"); 
-    	});
-	});
-
-	document.addEventListener("scroll", () => {
-		const menu = document.getElementById("header");
-		if (window.scrollY > 50) {
-			menu.style.backgroundColor = "rgba(0,0,0, 0.6)"; // Ciemne tło po przewinięciu
-		} else {
-			menu.style.backgroundColor = "rgba(0, 0, 0, 1)"; // Przezroczyste tło na górze
-		}
-	});
+        
 	</script>
+
 	<script>
-        // Funkcja dla każdego z przycisków
-function toggleText(toggleBtnId, textId, overlayId) {
-    const toggleBtn = document.getElementById(toggleBtnId);
-    const text = document.getElementById(textId);
-    const overlay = document.getElementById(overlayId);
-
-    toggleBtn.addEventListener('click', function() {
-        if (text.style.maxHeight === 'none') {
-            text.style.maxHeight = '150px';
-            overlay.style.height = '50px'; // Przywrócenie wysokości overlay
-            toggleBtn.textContent = 'Więcej';
-        } else {
-            text.style.maxHeight = 'none';
-            overlay.style.height = '0'; // Ukrywanie overlay
-            toggleBtn.textContent = 'Zobacz mniej';
-        }
-    });
-}
-
-// Wywołanie funkcji dla każdego przycisku i tekstu
-toggleText('toggleBtn1', 'text1', 'overlay1');
-toggleText('toggleBtn2', 'text2', 'overlay2');
-toggleText('toggleBtn3', 'text3', 'overlay3');
-toggleText('toggleBtn4', 'text4', 'overlay4');
+		
 
     </script>
 </body>

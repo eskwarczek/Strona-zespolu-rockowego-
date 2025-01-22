@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="index.css">
     <script src="jquery-3.7.1.min.js"></script>
     <script src="https://code.jquery.com/color/jquery.color-3.0.0.js" integrity="sha256-nXuT40V5wsIpHV/V7Ay53Vf/1rg21qpiGWOP9CRk2tM=" crossorigin="anonymous"></script>
+    <script defer src="index.js"></script>
 </head>
+
 <body>
     <header id="header">
         <nav id="logo_podstrona">
@@ -18,7 +20,7 @@
 			<li>
 				<a id="wysun">O NAS</a>
 				<ul>
-					<li><a href="#">HISTORIA</a></li>
+					<li><a href="historia.html">HISTORIA</a></li>
 					<li><a href="ekipa.html">EKIPA</a></li>
 					<li><a href="galeria.html">GALERIA</a></li>
 				</ul>
@@ -47,12 +49,52 @@
                 <div class="slide">
                     <img src="img/galeria/koncert1_4.jpg" alt="Koncert 1.4" class="slider">
                 </div>
+                <div class="slide">
+                    <img src="img/galeria/koncert1_5.jpg" alt="Koncert 1.5" class="slider">
+                </div>
+                <div class="slide">
+                    <img src="img/galeria/koncert1_6.jpg" alt="Koncert 1.6" class="slider">
+                </div>
+                <div class="slide">
+                    <img src="img/galeria/koncert1_7.jpg" alt="Koncert 1.7" class="slider">
+                </div>
+                <div class="slide">
+                    <img src="img/galeria/koncert1_8.jpg" alt="Koncert 1.8" class="slider">
+                </div>
+                <div class="slide">
+                    <img src="img/galeria/koncert2_1.jpg" alt="Koncert 2.1" class="slider">
+                </div>
+                <div class="slide">
+                    <img src="img/galeria/koncert2_2.jpg" alt="Koncert 2.2" class="slider">
+                </div>
+                <div class="slide">
+                    <img src="img/galeria/koncert2_3.jpg" alt="Koncert 2.3" class="slider">
+                </div>
+                <div class="slide">
+                    <img src="img/galeria/koncert2_4.jpg" alt="Koncert 2.4" class="slider">
+                </div>
+                <div class="slide">
+                    <img src="img/galeria/koncert2_5.jpg" alt="Koncert 2.5" class="slider">
+                </div>
+                <div class="slide">
+                    <img src="img/galeria/koncert2_6.jpg" alt="Koncert 2.6" class="slider">
+                </div>
             </div>
             <div id="pasek">
                 <img src="img/galeria/koncert1_1.jpg" class="sml" data-target="0">
                 <img src="img/galeria/koncert1_2.jpg" class="sml" data-target="1">
                 <img src="img/galeria/koncert1_3.jpg" class="sml" data-target="2">
                 <img src="img/galeria/koncert1_4.jpg" class="sml" data-target="3">
+                <img src="img/galeria/koncert1_5.jpg" class="sml" data-target="4">
+                <img src="img/galeria/koncert1_6.jpg" class="sml" data-target="5">
+                <img src="img/galeria/koncert1_7.jpg" class="sml" data-target="6">
+                <img src="img/galeria/koncert1_8.jpg" class="sml" data-target="7">
+                <img src="img/galeria/koncert2_1.jpg" class="sml" data-target="8">
+                <img src="img/galeria/koncert2_2.jpg" class="sml" data-target="9">
+                <img src="img/galeria/koncert2_3.jpg" class="sml" data-target="10">
+                <img src="img/galeria/koncert2_4.jpg" class="sml" data-target="11">
+                <img src="img/galeria/koncert2_5.jpg" class="sml" data-target="12">
+                <img src="img/galeria/koncert2_6.jpg" class="sml" data-target="13">
             </div>
         </div>
     </main>
@@ -89,21 +131,6 @@
 
         showSlide(currentSlide); // Wyświetl pierwszy slajd przy ładowaniu strony
     });
-	        $(document).ready(function() {
-            let timeout; // Zmienna do zarządzania opóźnieniem
-			
-			$('#menu > li').hover(
-				function () {
-					$(this).find('ul').stop(true, true).slideDown(300);
-				},
-				function () {
-					$(this).find('ul').stop(true, true).slideUp(300);					
-				}
-           	 );
-			 });
-			 
-
-
     </script>
 </body>
 </html>
