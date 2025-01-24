@@ -1,4 +1,5 @@
 /* GLOBALNE */
+
 body {
 	margin: 0;
 	padding: 0;
@@ -6,6 +7,7 @@ body {
 	font-family: verdana;
 	background-color: #000;
 	position: relative;
+	
 }
 #header {
 	position: fixed;
@@ -103,7 +105,8 @@ h1 {
     font-size: 1vw;
     color: #fff;
     margin-top: 2vw;
-	padding-bottom: 1vw;
+	margin-botom: 0vw;
+	padding-bottom: 3vw;
     position: relative;
 	background-color: #404040;
 	height: 5vw;
@@ -112,7 +115,8 @@ h1 {
     width: 100%;
     height: 0.2vw;
     background-color: #000;
-    margin-bottom: 1vw;
+    margin-bottom: 0.5vw;
+	
 }
 
 /* STRONA GŁÓWNA */
@@ -597,88 +601,77 @@ body {
 }
 /*Albumy*/
 
-.container-albumy {
-	display: flex;
-	width: 80%;
-	max-width: 1200px;
-	gap: 20px;
-	padding: 2vw 0 2vw 10vw;
-}
-
-.left-column {
-	flex: 1;
-	max-width: 25%;
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	height: 16vw;
-}
-
-.right-column {
-	flex: 3;
-	max-width: 75%;
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-}
-
-.album {
+.zawartosc {
 	text-align: center;
-	padding: 10px;
-	border: 1px solid #black;
-	background-color: #404040;
+
+}
+
+.data-wydania {
+	color: red;
+	font-size: 0.8rem;
+	display: block;
+	margin-bottom: 0.5rem;
+    margin-left: 14vw;
+	margin-right: 14vw;
+	padding-top: 2vw;
+	border-top: solid white 0.05vw;
+}
+.data-wydania:first-child{
+	border-top: none;
+}
+
+
+.nazwa {
+	color: white;
+	font-size: 1.5rem;
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
+	margin-bottom: 1rem;
+	
+}
+
+.nazwa:hover {
+	text-decoration: underline;
 }
 
 .album img {
-	max-width: 100%;
-	height: auto;
+	height: 15.2vw;
 	display: block;
-	margin: 10px auto 0;
+	margin: 0 auto;
+	padding-bottom: 2.5vw;
+	padding-top: 1.5vw;
+	transform: scale(1.2);
 }
-
-.album .data-wydania {
-	color: red;
-	font-size: 0.8vw;
-	margin-bottom: 5px;
-}
-
-.album .nazwa {
-	font-weight: bold;
-	color: white;
-	text-decoration: none;
-	font-size: 1.2vw;
-}
-
-.album .nazwa:hover {
-	text-decoration: underline;
+.album img:hover{
+	z-index: 10;
+    transform: scale(1.24);
+    overflow: visible;
 }
 
 .description {
-	padding: 10px;
-	background-color: #404040;
-	border: 1px solid black;
-	height: 16vw; 
-	text-align: center;
-}
-
-.description h2 {
-	margin-bottom: 10px;
-	margin-top: 1vw;
-	font-size: 2vw;
-	color: white;
-}
-.description h2:hover {
-	text-decoration: underline;
+	font-size: 0.7rem;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.5s ease;
+	margin-top: 1rem;
+	margin-left: 14vw;
+	margin-right: 14vw;
+	
 }
 
 .description p {
-	margin: 0;
-	font-size: 1vw;
 	color: white;
-}
-.description a {
 	margin: 0;
-	font-size: 1vw;
-	color: red;
-	margin-bottom: 0;
+	padding-bottom: 2vw;
+	width: 70vw;
+}
+.description:last-child{
+	border-bottom: solid white 0.05vw;
+}
+
+.overlayAlbumy {
+	height: 0;
+	background: rgba(0, 0, 0, 0.5);
+	transition: height 0.5s ease;
 }
